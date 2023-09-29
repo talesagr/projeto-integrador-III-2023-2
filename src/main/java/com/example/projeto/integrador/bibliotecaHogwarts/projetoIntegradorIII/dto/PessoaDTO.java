@@ -1,26 +1,29 @@
 package com.example.projeto.integrador.bibliotecaHogwarts.projetoIntegradorIII.dto;
 
-import com.example.projeto.integrador.bibliotecaHogwarts.projetoIntegradorIII.domain.People;
-import com.example.projeto.integrador.bibliotecaHogwarts.projetoIntegradorIII.domain.User;
 import com.example.projeto.integrador.bibliotecaHogwarts.projetoIntegradorIII.domain.UserType;
 import com.example.projeto.integrador.bibliotecaHogwarts.projetoIntegradorIII.orm.Pessoa;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.validation.constraints.NotEmpty;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class PeopleDTO {
-    private Integer idade;
+public class PessoaDTO {
+    @NotEmpty
     private String nome;
-    private String CPF;
+    @NotEmpty
+    private Integer idade;
+    @NotEmpty
+    private String cpf;
+    @NotEmpty
     private String endereco;
+    @NotEmpty
     private String celular;
+    @NotEmpty
     private UserType userType;
+
     public Pessoa toORM() {
-        return new Pessoa(nome,idade,CPF,endereco,celular,userType);
+        return new Pessoa(nome,idade,cpf,endereco,celular,userType);
     }
 }

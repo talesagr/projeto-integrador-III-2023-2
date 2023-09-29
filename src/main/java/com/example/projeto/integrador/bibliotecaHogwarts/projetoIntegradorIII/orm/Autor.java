@@ -14,6 +14,10 @@ public class Autor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer autorid;
 
+    private Integer autorlivrosoid;
+    @OneToOne
+    private Pessoa pessoa;
+
     private String name;
     //todo na tabela existem mais coisas
 
