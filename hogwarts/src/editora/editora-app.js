@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import menu from '../assets/134216_menu_lines_hamburger_icon - Copia 1.png';
+import headericon from '../assets/2730324_colour_feather_harry_potter_quill_icon 1.png';
 import './editora.css'; 
 
 class Editora extends Component {
@@ -79,12 +81,12 @@ class Editora extends Component {
       <div>
         <header className="header">
           <div>
-            <img className="headerIcon" src="imagens/2730324_colour_feather_harry_potter_quill_icon 1.png" alt="Ícone do cabeçalho" />
+            <img className="headerIcon" src={headericon} alt="Ícone do cabeçalho" />
           </div>
           <h1 className="bannerEscrita">Biblioteca Hogwarts</h1>
           <div className="sidebar" id="sidebar">
             <div className="toggle-btn" onClick={this.toggleSidebar}>
-              <img src="imagens/134216_menu_lines_hamburger_icon - Copia 1.png" alt="Abrir/Fechar" />
+              <img src={menu} alt="Abrir/Fechar" />
             </div>
             <ul className="menuList">
               <div>
